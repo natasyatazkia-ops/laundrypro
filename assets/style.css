@@ -1,0 +1,115 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Segoe UI", Arial, sans-serif; background: #eef1f8; color: #1f2a44; }
+
+/* ---------- Login ---------- */
+.halaman-login { display: flex; align-items: center; justify-content: center; min-height: 100vh;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb); }
+.kotak-login { background: #fff; width: 100%; max-width: 360px; padding: 32px; border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15); }
+.kotak-login h1 { color: #1e3a8a; text-align: center; }
+.kotak-login .sub { text-align: center; color: #6b7280; font-size: 14px; margin: 6px 0 20px; }
+.kotak-login label { display: block; font-size: 14px; margin: 12px 0 4px; }
+.kotak-login input { width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; }
+.kotak-login .btn { width: 100%; margin-top: 20px; }
+
+/* ---------- Umum ---------- */
+.btn { display: inline-block; padding: 10px 16px; border: none; border-radius: 8px; cursor: pointer;
+    font-size: 14px; text-decoration: none; }
+.btn-utama { background: #2563eb; color: #fff; }
+.btn-utama:hover { background: #1d4ed8; }
+.alert { padding: 10px 12px; border-radius: 8px; font-size: 14px; margin-bottom: 8px; }
+.alert-error { background: #fee2e2; color: #991b1b; }
+.alert-sukses { background: #dcfce7; color: #166534; }
+.alert-peringatan { background: #fef3c7; color: #92400e; }
+
+/* ---------- Layout dashboard ---------- */
+.sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 220px; padding: 20px 12px;
+    background: linear-gradient(180deg, #1e3a8a, #1e40af); color: #fff; display: flex; flex-direction: column; }
+.sidebar .logo { font-size: 20px; font-weight: bold; padding: 0 8px 16px; border-bottom: 1px solid rgba(255,255,255,.2); }
+.sidebar .menu-judul { font-size: 11px; opacity: .7; margin: 16px 8px 8px; }
+.sidebar a { color: #fff; text-decoration: none; padding: 10px 12px; border-radius: 8px; font-size: 14px; margin-bottom: 2px; }
+.sidebar a:hover { background: rgba(255,255,255,.1); }
+.sidebar a.aktif { background: #3b82f6; }
+.sidebar a.menu-bawah { margin-top: auto; }
+.konten { margin-left: 220px; padding: 20px; }
+.topbar { background: #fff; padding: 16px 20px; border-radius: 12px; display: flex;
+    justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.kartu { background: #fff; padding: 20px; border-radius: 12px; margin-bottom: 20px; }
+
+@media (max-width: 768px) {
+    .sidebar { position: static; width: 100%; }
+    .konten { margin-left: 0; }
+}
+
+/* ---------- Halaman data ---------- */
+.judul { font-size: 22px; margin-bottom: 2px; }
+.keterangan { color: #6b7280; font-size: 14px; margin-bottom: 16px; }
+.baris-statistik { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.stat span { display: block; color: #6b7280; font-size: 13px; }
+.stat b { font-size: 26px; }
+.kepala-kartu { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.form-cari { display: flex; gap: 8px; margin-bottom: 14px; }
+.form-cari input { flex: 1; }
+input, select, textarea { padding: 9px 10px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; font-family: inherit; }
+.tabel-wrap { overflow-x: auto; }
+.tabel { width: 100%; border-collapse: collapse; font-size: 14px; }
+.tabel th { background: #f1f5f9; text-align: left; padding: 10px; font-size: 12px; color: #475569; text-transform: uppercase; }
+.tabel td { padding: 10px; border-bottom: 1px solid #eef1f6; }
+.tabel .kosong { text-align: center; color: #9ca3af; padding: 20px; }
+.aksi { display: flex; gap: 6px; }
+.aksi form { display: inline; }
+.label { padding: 3px 10px; border-radius: 20px; font-size: 12px; }
+.label-biru { background: #dbeafe; color: #1e40af; }
+.label-hijau { background: #dcfce7; color: #166534; }
+.label-abu { background: #e5e7eb; color: #374151; }
+.label-kuning { background: #fef3c7; color: #92400e; }
+.label-merah { background: #fee2e2; color: #991b1b; }
+.btn-kecil { padding: 6px 12px; font-size: 13px; }
+.btn-kuning { background: #fbbf24; color: #1f2a44; }
+.btn-merah { background: #ef4444; color: #fff; }
+.btn-abu { background: #e5e7eb; color: #1f2a44; }
+.btn-hijau { background: #16a34a; color: #fff; }
+
+/* ---------- Form ---------- */
+.form-kartu { max-width: 560px; }
+.form-kartu h3 { margin: 18px 0 4px; font-size: 16px; color: #1e3a8a; }
+.form-kartu h3:first-of-type { margin-top: 0; }
+.form-kartu .tabel-detail + form h3:first-of-type { margin-top: 20px; }
+.form-kartu label { display: block; font-size: 14px; margin: 12px 0 4px; }
+.form-kartu input, .form-kartu select, .form-kartu textarea { width: 100%; }
+.form-kartu small { color: #6b7280; font-size: 12px; }
+.tombol-form { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
+
+/* ---------- Tagihan ---------- */
+.teks-merah { color: #dc2626; }
+.kotak-hitung { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px;
+    background: #f1f5f9; padding: 12px; border-radius: 8px; }
+.kotak-hitung span { display: block; font-size: 12px; color: #6b7280; }
+.kotak-hitung b { font-size: 15px; }
+.tabel-detail { width: 100%; font-size: 14px; border-collapse: collapse; margin-top: 8px; }
+.tabel-detail td { padding: 8px 4px; border-bottom: 1px solid #eef1f6; }
+.tabel-detail td:first-child { color: #6b7280; width: 40%; }
+
+/* ---------- Pembayaran ---------- */
+.pilihan { display: flex !important; gap: 8px; align-items: center; padding: 10px; border: 1px solid #e5e7eb;
+    border-radius: 8px; margin: 8px 0 !important; cursor: pointer; }
+.pilihan input { width: auto !important; }
+.tab-status { display: flex; gap: 6px; margin-bottom: 14px; }
+.tab-status a { padding: 7px 14px; border-radius: 20px; background: #f1f5f9; color: #334155; text-decoration: none; font-size: 13px; }
+.tab-status a.aktif { background: #2563eb; color: #fff; }
+.dua-kolom { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+.gambar-bukti { width: 100%; max-height: 480px; object-fit: contain; border-radius: 8px; border: 1px solid #e5e7eb; margin: 10px 0 4px; }
+.form-validasi label { display: block; font-size: 14px; margin: 16px 0 4px; }
+.form-validasi textarea { width: 100%; }
+@media (max-width: 900px) { .dua-kolom { grid-template-columns: 1fr; } }
+
+/* ---------- Laporan, pengingat, cetak ---------- */
+.form-cari label { display: flex; align-items: center; gap: 6px; font-size: 14px; }
+.tabel tfoot th { background: #f1f5f9; text-align: left; padding: 10px; font-size: 14px; color: #1f2a44; }
+.pengingat a, .alert a { font-weight: bold; color: inherit; }
+@media print {
+    .sidebar, .no-print, .topbar { display: none !important; }
+    .konten { margin: 0; padding: 0; }
+    body { background: #fff; }
+    .kartu { box-shadow: none; border: 1px solid #ddd; }
+}

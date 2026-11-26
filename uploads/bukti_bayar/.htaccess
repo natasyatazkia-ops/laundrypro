@@ -1,0 +1,5 @@
+# Folder ini hanya untuk gambar bukti bayar. Jangan izinkan file PHP dijalankan dari sini.
+<FilesMatch "\.(php|phtml|phar)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes
